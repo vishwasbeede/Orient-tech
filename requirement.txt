@@ -3,6 +3,7 @@ click==7.1.2
 cryptography==2.1.4
 enum34==1.1.6
 Flask==1.1.2
+gunicorn==19.10.0
 idna==2.6
 ipaddress==1.0.17
 itsdangerous==1.1.0
