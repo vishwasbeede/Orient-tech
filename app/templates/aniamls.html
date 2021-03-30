@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction info</title>
+</head>
+<body>
+    <p style="text-align: center;font-family:'Times New Roman'">Orient Mart <br> 
+    <span style="font-size: 10px;">Valued products </span></p>
+    
+<div style="font-family: monospace;background-color: darkcyan;color: #310;align-content: center;margin-left: 10%;margin-right: 10%;">
+    <p  style="align-items:center;padding-left: 40%;">Mini Statement</p>
+    <table style="padding-left: 30%;">
+        <tr><td>Date</td><td>Transaction </td><td>Amount</td></tr>    
+        {% for (j,k,l) in z %}
+            <tr><td>{{j}}</td><td>{{k}}</td><td>{{l}}</td></tr>            
+            {% endfor %}
+
+        </table>
+        <br>
+<a onclick="window.print()" style="margin-left: 350px; padding-left: 50px;padding-right: 50px;">print</a>
+</div>
+<!-- <script>window.print();</script> -->
+    
+</body>
+</html>
+
+
+<!-- <tr><h3><span style="color: {{j}};font-family: Arial">{{k}}</h3>/tr> -->
+<!-- <tr style="color: {{j}}"><td>{{k}}</td><td>{{k}}</td><td>{{k}}</td><td>{{k}}</td><td>{{k}}</td><td>{{k}}</td><td>{{k}}</td></tr> -->

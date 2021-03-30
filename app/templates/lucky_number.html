@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check lucky number!!</title>
+</head>
+<body>
+    <br><h3 id="output-menu" style="text-align: center;">
+        "Get your lucky number!!!"
+    </h3>
+    <br><br>
+    <div style="margin-right: 25%;text-align: center; background-color: darkcyan;margin-left: 25%;">
+        
+        <br>
+        <p style="color: darkslateblue;font-weight:lighter;">Calculate your lucky number from your birth date</p>
+        
+        <form method="POST">
+            <label style="padding-right: 10%;" for="input_dob">Date of birth:</label>
+            <input style="text-align:left;align-items: right;" type="date" id="dob" name="input_dob" required><br> 
+            <br>
+            <br>
+            <div style="text-align:center;">
+                <input type="submit" value="get lucky number" id="">
+            </div>  
+            <br>
+
+        </form>
+    </div>
+           <div id="output-show" style="margin-right: 25%;text-align: center; background-color: rgb(64, 161, 161);margin-left: 25%;display: none;">
+                
+            <br>
+                your DOB is {{output_data[0]}}
+                <br>
+               <span style="text-align: center;"> and</span>
+                <br>    
+                your Lucky number is {{output_data[1]}}
+                <br>
+                <br>
+                <br>
+                <a style="text-decoration: none;color: rgb(1, 45, 56);" href="https://www.numerology.com/articles/about-numerology/single-digit-number-{{output_data[1]}}-meaning/" target="_blank">Get more on personality</a>
+           </div>
+    <div style="margin-right: 25%;text-align: center; background-color: darkcyan;margin-left: 25%;">
+       <br><br> <a style="text-decoration:none;font-family: sans-serif; color: rgba(66, 27, 209, 0.801);" href="/">Home</a>
+    </div>
+    <style>
+        body{
+            background-color: darkslategrey;
+            color: floralwhite;
+        }
+    </style>
+    <script>
+       var val2;
+       val2 ="String Values" ;
+       var x_var;
+       x_var = {{ output_data[1]|safe }};
+       if (typeof(x_var)  == "number") {
+        document.getElementById("output-show").style.display="block";
+       }
+       else if (typeof(x_var)  == "string"){
+        document.getElementById("output-menu").style.color="#0fc" ;
+       }
+       else
+       {
+           
+       }
+       
+       
+    </script>
+</body>
